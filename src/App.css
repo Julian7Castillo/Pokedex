@@ -13,6 +13,18 @@
   }
 }
 
+header{
+  display: flex;
+  justify-content: space-between;
+  background-color: #282c34;
+  color: #ffffff;
+  padding: 10px 10px 10px 10px;
+  margin-bottom: 20px;
+}
+
+.buscador{
+  width: 500px;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
