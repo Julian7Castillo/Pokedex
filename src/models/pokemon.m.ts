@@ -2,6 +2,7 @@ export type Pokemon = {
     id: string;
     type1: Array<any>;
     type2: Array<any>;
+    //evoname: Array;
     name: string;
     imggif: string;
     imglarge: string;

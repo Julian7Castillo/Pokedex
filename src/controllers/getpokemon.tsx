@@ -10,6 +10,7 @@ export async function getPokemons() : Promise<Pokemon[]> {
         id: pokemon.national_number,
         type1: pokemon.type[0],
         type2: pokemon.type[1],
+        //evoname: pokemon.evolution[0],
         name: pokemon.name,
         imggif: changeName(pokemon.sprites['animated']),
         imgnormal: pokemon.sprites['normal'],
@@ -35,11 +36,25 @@ export async function getPokemons() : Promise<Pokemon[]> {
 export function changeName(name: string): string{
     if(name.includes("farfetch'd")){
         return name.replace("farfetch'd", "farfetchd");
-    }
-    else if(name.includes("mr.-mime")){
+
+    }else if(name.includes("nidoran♀")){
+        return name.replace("nidoran♀", "nidoran-f");
+
+    }else if(name.includes("nidoran♂")){
+        return name.replace("nidoran♂", "nidoran-m");
+
+    }else if(name.includes("mr.-mime")){
         return name.replace("mr.-mime", "mr-mime");
+
+    }else if(name.includes("mime-jr.")){
+        return name.replace("mime-jr.", "mime-jr");
 
     }else{
         return name;
     }
 }
+
+const url = [
+    "https://img.pokemondb.net/sprites/x-y/normal/chespin.png",
+    ""
+]

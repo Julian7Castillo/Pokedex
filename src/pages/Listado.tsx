@@ -41,15 +41,27 @@ const Listado = () => {
                     type="text"
                 />
             </header>
-            <div className="content-wrapper">
+            <main className="content-wrapper">
                 <div className="content">
                     <div className="row gap-3">
                         {filtrarPokemon?.slice(0, 900).map((pokemons) => (
+                            <button className="mx-auto boton" style={{ width: '18rem' }}>
                             <Card className="mx-auto" style={{ width: '18rem' }}>
-                            <Card.Header># {pokemons.id} - Tipo: {pokemons.type1}  {pokemons.type2}</Card.Header>
+                            <Card.Header># {pokemons.id}</Card.Header>
                             <Card.Img width="80" height="100" variant="top" src={pokemons.imggif} className="d-block mx-auto w-50" />
                             <Card.Body>
                                 <Card.Title className="text-center"><b>{pokemons.name}</b></Card.Title>
+                                <div className='tipos'>
+                                    <b>Tipo:</b> 
+                                    <div className={`tipo ${pokemons.type1}`}>
+                                        {pokemons.type1}
+                                    </div>
+                                    {pokemons.type2 && (
+                                        <div className={`tipo ${pokemons.type2}`}>
+                                            {pokemons.type2}
+                                        </div>
+                                    )}
+                                </div>
                                 <ListGroup>
                                     <ListGroup.Item>
                                         <Figure.Image
@@ -90,10 +102,11 @@ const Listado = () => {
                                 </ListGroup>
                             </Card.Body>
                             </Card>
+                            </button>
                         ))}
                     </div>
                 </div>
-            </div>
+            </main>
         </>
     );
 }
