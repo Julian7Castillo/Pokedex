@@ -45,64 +45,64 @@ const Listado = () => {
                 <div className="content">
                     <div className="row gap-3">
                         {filtrarPokemon?.slice(0, 900).map((pokemons) => (
-                            <button className="mx-auto boton" style={{ width: '18rem' }}>
-                            <Card className="mx-auto" style={{ width: '18rem' }}>
-                            <Card.Header># {pokemons.id}</Card.Header>
-                            <Card.Img width="80" height="100" variant="top" src={pokemons.imggif} className="d-block mx-auto w-50" />
-                            <Card.Body>
-                                <Card.Title className="text-center"><b>{pokemons.name}</b></Card.Title>
-                                <div className='tipos'>
-                                    <b>Tipo:</b> 
-                                    <div className={`tipo ${pokemons.type1}`}>
-                                        {pokemons.type1}
-                                    </div>
-                                    {pokemons.type2 && (
-                                        <div className={`tipo ${pokemons.type2}`}>
-                                            {pokemons.type2}
+                            <Button className="mx-auto" style={{ width: '18rem' }}>
+                                <Card className="mx-auto" style={{ width: '18rem' }}>
+                                <Card.Header># {pokemons.id}</Card.Header>
+                                <Card.Img width="80" height="100" variant="top" src={pokemons.imggif} className="d-block mx-auto w-50" />
+                                <Card.Body>
+                                    <Card.Title className="text-center"><b>{pokemons.name}</b></Card.Title>
+                                    <div className='tipos'>
+                                        <b>Tipo:</b> 
+                                        <div className={`tipo ${pokemons.type1}`}>
+                                            {pokemons.type1}
                                         </div>
-                                    )}
-                                </div>
-                                <ListGroup>
-                                    <ListGroup.Item>
-                                        <Figure.Image
-                                            width={16}
-                                            height={16}
-                                            src="https://cdn-icons-png.flaticon.com/128/833/833472.png"
-                                            /><b> HP:</b> {pokemons.hp}</ListGroup.Item>
-                                    <ListGroup.Item>
-                                        <Figure.Image
-                                            width={16}
-                                            height={16}
-                                            src="https://cdn-icons-png.flaticon.com/128/297/297837.png"
-                                            /><b> Ataque:</b> {pokemons.attack}</ListGroup.Item>
-                                    <ListGroup.Item>
-                                        <Figure.Image
-                                            width={16}
-                                            height={16}
-                                            src="https://cdn-icons-png.flaticon.com/128/5448/5448364.png"
-                                            /><b> Defensa:</b> {pokemons.defense}</ListGroup.Item>
-                                    <ListGroup.Item>
-                                        <Figure.Image
-                                            width={16}
-                                            height={16}
-                                            src="https://cdn-icons-png.flaticon.com/128/1457/1457939.png"
-                                            /><b> E. Ataque:</b> {pokemons.sp_atk}</ListGroup.Item>
-                                    <ListGroup.Item>
-                                        <Figure.Image
-                                            width={16}
-                                            height={16}
-                                            src="https://cdn-icons-png.flaticon.com/128/1469/1469840.png"
-                                            /><b> E. Defensa:</b> {pokemons.sp_def}</ListGroup.Item>
-                                    <ListGroup.Item>
-                                        <Figure.Image
-                                            width={16}
-                                            height={16}
-                                            src="https://cdn-icons-png.flaticon.com/128/3563/3563460.png"
-                                            /><b> Velocidad:</b> {pokemons.speed}</ListGroup.Item>
-                                </ListGroup>
-                            </Card.Body>
-                            </Card>
-                            </button>
+                                        {pokemons.type2 && (
+                                            <div className={`tipo ${pokemons.type2}`}>
+                                                {pokemons.type2}
+                                            </div>
+                                        )}
+                                    </div>
+                                    <ListGroup>
+                                        <ListGroup.Item>
+                                            <Figure.Image
+                                                width={16}
+                                                height={16}
+                                                src="https://cdn-icons-png.flaticon.com/128/833/833472.png"
+                                                /><b> HP:</b> {pokemons.hp}</ListGroup.Item>
+                                        <ListGroup.Item>
+                                            <Figure.Image
+                                                width={16}
+                                                height={16}
+                                                src="https://cdn-icons-png.flaticon.com/128/297/297837.png"
+                                                /><b> Ataque:</b> {pokemons.attack}</ListGroup.Item>
+                                        <ListGroup.Item>
+                                            <Figure.Image
+                                                width={16}
+                                                height={16}
+                                                src="https://cdn-icons-png.flaticon.com/128/5448/5448364.png"
+                                                /><b> Defensa:</b> {pokemons.defense}</ListGroup.Item>
+                                        <ListGroup.Item>
+                                            <Figure.Image
+                                                width={16}
+                                                height={16}
+                                                src="https://cdn-icons-png.flaticon.com/128/1457/1457939.png"
+                                                /><b> E. Ataque:</b> {pokemons.sp_atk}</ListGroup.Item>
+                                        <ListGroup.Item>
+                                            <Figure.Image
+                                                width={16}
+                                                height={16}
+                                                src="https://cdn-icons-png.flaticon.com/128/1469/1469840.png"
+                                                /><b> E. Defensa:</b> {pokemons.sp_def}</ListGroup.Item>
+                                        <ListGroup.Item>
+                                            <Figure.Image
+                                                width={16}
+                                                height={16}
+                                                src="https://cdn-icons-png.flaticon.com/128/3563/3563460.png"
+                                                /><b> Velocidad:</b> {pokemons.speed}</ListGroup.Item>
+                                    </ListGroup>
+                                </Card.Body>
+                                </Card>
+                            </Button>
                         ))}
                     </div>
                 </div>
